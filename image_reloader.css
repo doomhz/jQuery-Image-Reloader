@@ -1,0 +1,13 @@
+.loading-image {
+  background: transparent url("loader.gif") center no-repeat;
+  float: left;
+  margin-bottom: 10px;
+}
+
+img {
+  float: left;
+}
+
+p {
+  clear: both;
+}

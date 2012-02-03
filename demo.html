@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>jQuery Image Reloader</title>
+    <link href="image_reloader.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.imageReloader.js"></script>
+  </head>
+  <body>
+    <h1>jQuery Image Reloader</h1>
+
+    <p>Bellow are two images. The firts one is non-existent. The browser tries to load them both, but it fails. The Image Reloader plugin retries to load the non-existent image 10 times by default. In case that the image could not be loaded, it displays the browser's default broken image with an alt attribute.</p>
+
+    <img src="http://dumitruglavan.com/non_existent_image.jpg" width="200" height="200" class="slow-images">
+    <img src="http://dumitruglavan.com/wp-content/uploads/2011/11/IMG_0897-1024x768.jpg" width="200" height="200" class="slow-images">
+
+    <p>This plugin is effective when you load images from a cloud (i.e. Amazon S3) and the CDN has a delay until the image is accessible. The browser will display a broken image icon instead and won't retry to reload it. jQuery Image Reloader will take care of that.</p>
+
+    <h2>Plugin code</h2>
+
+    <p>The only code you need to activate the plugin is this:</p>
+
+    <code>
+      $(".slow-images").imageReloader();
+    </code>
+
+    <h2>Options:</h2>
+
+    <dl>
+      <dt><b>loadingClass</b>: "loading-image"</dt>
+      <dd>
+        The plugin hides the original image until it's successfully loaded and replaces it with a DIV that will take this CSS class.
+      </dd>
+      <dt><b>reloadTime</b>: 1500</dt>
+      <dd>
+        Set up the time between the reload attempts.
+      </dd>
+      <dt><b>maxTries</b>: 10</dt>
+      <dd>
+        Set up how many reload attempts should be made until the broken icon is displayed.
+      </dd>
+    </dl>
+
+    <script type="text/javascript">
+      $(".slow-images").imageReloader();
+    </script>
+  </body>
+</html>
