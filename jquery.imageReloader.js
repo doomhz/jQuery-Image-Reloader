@@ -1,3 +1,20 @@
+/**
+* jQuery Image Reloader
+*
+* @author Dumitru Glavan
+* @link http://dumitruglavan.com/
+* @version 1.0 (3-FEB-2012)
+* @requires jQuery v1.4 or later
+*
+* @example $('.slow-images').imageReloader()
+*
+* Find source on GitHub: https://github.com/doomhz/jQuery-Image-Reloader
+*
+* Dual licensed under the MIT and GPL licenses:
+*   http://www.opensource.org/licenses/mit-license.php
+*   http://www.gnu.org/licenses/gpl.html
+*
+*/
 (function ($) {
   $.fn.imageReloader = function (options) {
 
